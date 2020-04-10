@@ -1,0 +1,27 @@
+{
+  "name": "howareyoutoday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./build.sh && node dist/app.js 8000",
+    "test-domain": "./build.sh && jest --require source-map-support/register -t 3000 dist/test/domain",
+    "test-db": "./build.sh && jest --require source-map-support/register -t 3000 dist/test/db",
+    "test-api": "./build.sh && jest --require source-map-support/register -t 3000 dist/test/api"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "jest": "^25.3.0"
+  },
+  "dependencies": {
+    "dateformat": "^3.0.3",
+    "koa": "^2.11.0",
+    "koa-route": "^3.2.0",
+    "pg": "^8.0.2"
+  }
+}
